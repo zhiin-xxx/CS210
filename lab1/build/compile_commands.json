@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/xzx/CAII/lab1/build",
+  "command": "/usr/lib/ccache/c++  -I/home/xzx/CAII/lab1/third-party  -Wall -Wextra -pedantic -O2 -g -DNDEBUG -std=gnu++20 -o CMakeFiles/simulator.dir/src/main.cc.o -c /home/xzx/CAII/lab1/src/main.cc",
+  "file": "/home/xzx/CAII/lab1/src/main.cc"
+},
+{
+  "directory": "/home/xzx/CAII/lab1/build",
+  "command": "/usr/lib/ccache/c++  -I/home/xzx/CAII/lab1/third-party  -Wall -Wextra -pedantic -O2 -g -DNDEBUG -std=gnu++20 -o CMakeFiles/simulator.dir/src/memory.cc.o -c /home/xzx/CAII/lab1/src/memory.cc",
+  "file": "/home/xzx/CAII/lab1/src/memory.cc"
+},
+{
+  "directory": "/home/xzx/CAII/lab1/build",
+  "command": "/usr/lib/ccache/c++  -I/home/xzx/CAII/lab1/third-party  -Wall -Wextra -pedantic -O2 -g -DNDEBUG -std=gnu++20 -o CMakeFiles/simulator.dir/src/simulator.cc.o -c /home/xzx/CAII/lab1/src/simulator.cc",
+  "file": "/home/xzx/CAII/lab1/src/simulator.cc"
+},
+{
+  "directory": "/home/xzx/CAII/lab1/build",
+  "command": "/usr/lib/ccache/c++  -I/home/xzx/CAII/lab1/third-party  -Wall -Wextra -pedantic -O2 -g -DNDEBUG -std=gnu++20 -o CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o -c /home/xzx/CAII/lab1/src/five_stage_simulator.cc",
+  "file": "/home/xzx/CAII/lab1/src/five_stage_simulator.cc"
+},
+{
+  "directory": "/home/xzx/CAII/lab1/build",
+  "command": "/usr/lib/ccache/c++  -I/home/xzx/CAII/lab1/third-party  -Wall -Wextra -pedantic -O2 -g -DNDEBUG -std=gnu++20 -o CMakeFiles/simulator.dir/src/riscv.cc.o -c /home/xzx/CAII/lab1/src/riscv.cc",
+  "file": "/home/xzx/CAII/lab1/src/riscv.cc"
+}
+]
