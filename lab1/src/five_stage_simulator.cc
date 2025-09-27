@@ -156,6 +156,7 @@ void FiveStageSimulator::Decode() {
   // data hazard
   // unhandable data hazard(read after load)
   auto wait_for_data = [&](RegId rs) -> bool {
+    if(execute_op_.get() == nullptr) return false;
     return IsReadMem(execute_op_.get()->inst_type) &&
            (rs == data_hazard_execute_op_dest_ );
   };
@@ -169,17 +170,20 @@ void FiveStageSimulator::Decode() {
     return;
   }
   
-  auto data_forwarding=[&](RegId rs) -> uint64_t {
+  auto data_forwarding=[&](RegId& rs) -> bool {
     if (rs > 0) {
       if (rs == data_hazard_execute_op_dest_) {
-        return execute_op_ ? execute_op_->out : 0;
+        rs= execute_op_ ? execute_op_->out : 0;
       } else if (rs == data_hazard_mem_op_dest_) {
-        return mem_op_ ? mem_op_->out : 0;
+        rs= mem_op_ ? mem_op_->out : 0;
       } else if (rs == data_hazard_wb_op_dest_) {
-        return wb_op_ ? wb_op_->out : 0;
+        rs= wb_op_ ? wb_op_->out : 0;
       }
+      else return false;
+    
+      return true;
     }
-    return regs_[rs];
+    return false;
   };
   if (data_forwarding(op->rs1) || data_forwarding(op->rs2)) {
     if (verbose_) {
