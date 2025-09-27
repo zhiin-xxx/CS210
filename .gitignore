@@ -1,0 +1,21 @@
+# 忽略二进制文件
+*.o
+*.exe
+*.out
+*.class
+
+# 忽略图片
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# 忽略日志文件
+*.log
+
+# 忽略临时文件 / 编辑器文件
+*.swp
+*.tmp
+
+lab1/build/
+
