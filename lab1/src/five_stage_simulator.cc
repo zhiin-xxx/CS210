@@ -154,10 +154,10 @@ void FiveStageSimulator::Decode() {
   // data hazard detect at last to show inststr
   // detect and handle data hazard
   // data hazard
+  // unhandable data hazard(read after load)
   auto wait_for_data = [&](RegId rs) -> bool {
-    return rs > 0 &&
-           (rs == data_hazard_execute_op_dest_ ||
-            rs == data_hazard_mem_op_dest_ || rs == data_hazard_wb_op_dest_);
+    return IsReadMem(execute_op_.get()->inst_type) &&
+           (rs == data_hazard_execute_op_dest_ );
   };
   if (wait_for_data(op->rs1) || wait_for_data(op->rs2)) {
     if (verbose_) {
@@ -165,9 +165,28 @@ void FiveStageSimulator::Decode() {
     }
     // debug information
     history_.data_hazard_count++;
+
     return;
   }
-
+  
+  auto data_forwarding=[&](RegId rs) -> uint64_t {
+    if (rs > 0) {
+      if (rs == data_hazard_execute_op_dest_) {
+        return execute_op_ ? execute_op_->out : 0;
+      } else if (rs == data_hazard_mem_op_dest_) {
+        return mem_op_ ? mem_op_->out : 0;
+      } else if (rs == data_hazard_wb_op_dest_) {
+        return wb_op_ ? wb_op_->out : 0;
+      }
+    }
+    return regs_[rs];
+  };
+  if (data_forwarding(op->rs1) || data_forwarding(op->rs2)) {
+    if (verbose_) {
+      printf("\tforwading at decode for data hazard\n");
+    }
+    return;
+  }
   // control hazard
   wait_for_branch_ = IsBranch(op->inst_type) || IsJump(op->inst_type);
 
