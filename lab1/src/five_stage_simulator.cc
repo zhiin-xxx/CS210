@@ -156,8 +156,8 @@ void FiveStageSimulator::Decode() {
   // data hazard
   // unhandable data hazard(read after load)
   auto wait_for_data = [&](RegId rs) -> bool {
-    if(execute_op_.get() == nullptr) return false;
-    return IsReadMem(execute_op_.get()->inst_type) &&
+    if(mem_op_.get() == nullptr) return false;
+    return IsReadMem(mem_op_.get()->inst_type) &&
            (rs == data_hazard_execute_op_dest_ );
   };
   if (wait_for_data(op->rs1) || wait_for_data(op->rs2)) {
@@ -170,14 +170,19 @@ void FiveStageSimulator::Decode() {
     return;
   }
   
-  auto data_forwarding=[&](RegId& rs) -> bool {
+  auto data_forwarding=[&](RegId& rs,int64_t& op) -> bool {
     if (rs > 0) {
       if (rs == data_hazard_execute_op_dest_) {
-        rs= execute_op_ ? execute_op_->out : 0;
+        op= mem_op_ ? mem_op_->out : 0;
+      printf("\texecute->decode\n");
       } else if (rs == data_hazard_mem_op_dest_) {
-        rs= mem_op_ ? mem_op_->out : 0;
+        op= wb_op_ ? wb_op_->out : 0;
+      printf("\tmem->decode\n");
       } else if (rs == data_hazard_wb_op_dest_) {
-        rs= wb_op_ ? wb_op_->out : 0;
+        //前半个周期写回 后半个周期读取
+        //此时值已经被写回到寄存器堆中，可以认为是读取寄存器堆
+        printf("\twb->decode\n");
+        return false;
       }
       else return false;
     
@@ -185,11 +190,10 @@ void FiveStageSimulator::Decode() {
     }
     return false;
   };
-  if (data_forwarding(op->rs1) || data_forwarding(op->rs2)) {
+  if (data_forwarding(op->rs1,op->op1) || data_forwarding(op->rs2,op->op2)) {
     if (verbose_) {
       printf("\tforwading at decode for data hazard\n");
     }
-    return;
   }
   // control hazard
   wait_for_branch_ = IsBranch(op->inst_type) || IsJump(op->inst_type);
