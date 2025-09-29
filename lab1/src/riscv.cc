@@ -110,7 +110,9 @@ void DecodeInst(PipeOp* op, const Regs& regs) {
         case 0x1:  // sll
           if (funct7 == 0x00) {
             inst_type = SLL;
-          } else {
+          } else if (funct7 == 0x01) {
+            inst_type = MULH;
+          }else {
             throw std::runtime_error(std::format(
                 "Unknown funct7 {:#x} for funct3 {:#x}\n", funct7, funct3));
           }
@@ -497,6 +499,7 @@ void ExecuteInst(PipeOp* op, bool* exit_ctrl, const Memory* mem) {
   uint32_t& jump_pc = op->jump_pc;
   jump_pc = pc + 4;
 
+  int64_t a,b,c,d;
   switch (inst_type) {
     case LUI:
       out = offset << 12;
@@ -628,6 +631,13 @@ void ExecuteInst(PipeOp* op, bool* exit_ctrl, const Memory* mem) {
       break;
     case MUL:
       out = op1 * op2;
+      break;
+    case MULH:
+      a=op1>>32;
+      b=op1 & 0xffffffff;
+      c=op2>>32;
+      d=op2 & 0xffffffff;
+      out = a*c + ((a*d+b*c)>>32);
       break;
     case DIV:
       out = op1 / op2;

@@ -147,6 +147,7 @@ enum InstType {
   SLLW = 50,
   SRLW = 51,
   SRAW = 52,
+  MULH=53,
 };
 
 inline const char* INSTNAME[]{
@@ -156,7 +157,8 @@ inline const char* INSTNAME[]{
     "srli", "srai",  "add",   "sub",   "sll",   "slt",  "sltu", "xor",  "srl",
     "sra",  "or",    "and",   "ecall", "addiw", "mul",  "div",  "rem",
     "lwu",  "slliw", "srliw", "sraiw", "addw",  "subw", "sllw", "srlw", "sraw",
-};
+    "mulh",
+  };
 
 // Opcode field
 static constexpr int OP_REG = 0x33;

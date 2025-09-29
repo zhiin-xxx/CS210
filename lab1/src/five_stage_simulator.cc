@@ -16,6 +16,8 @@
 #include "utils.h"
 
 using namespace RISCV;
+#define LOG(fmt, ...) \
+    do { if (verbose_) printf(fmt, ##__VA_ARGS__); } while(0)
 
 void FiveStageSimulator::Run() {
   // Main Simulation Loop
@@ -174,14 +176,14 @@ void FiveStageSimulator::Decode() {
     if (rs > 0) {
       if (rs == data_hazard_execute_op_dest_) {
         op= mem_op_ ? mem_op_->out : 0;
-      printf("\texecute->decode\n");
+      LOG("\texecute->decode\n");
       } else if (rs == data_hazard_mem_op_dest_) {
         op= wb_op_ ? wb_op_->out : 0;
-      printf("\tmem->decode\n");
+      LOG("\tmem->decode\n");
       } else if (rs == data_hazard_wb_op_dest_) {
         //前半个周期写回 后半个周期读取
         //此时值已经被写回到寄存器堆中，可以认为是读取寄存器堆
-        printf("\twb->decode\n");
+        LOG("\twb->decode\n");
         return false;
       }
       else return false;
@@ -191,14 +193,10 @@ void FiveStageSimulator::Decode() {
     return false;
   };
   if (data_forwarding(op->rs1,op->op1)) {
-    if (verbose_) {
-      printf("\tforwading at decode for data1 hazard\n");
-    }
+      LOG("\tforwading at decode for data1 hazard\n");
   }
   if (data_forwarding(op->rs2,op->op2)) {
-    if (verbose_) {
-      printf("\tforwading at decode for data2 hazard\n");
-    }
+      LOG("\tforwading at decode for data2 hazard\n");
   }
   // control hazard
   wait_for_branch_ = IsBranch(op->inst_type) || IsJump(op->inst_type);
