@@ -190,9 +190,14 @@ void FiveStageSimulator::Decode() {
     }
     return false;
   };
-  if (data_forwarding(op->rs1,op->op1) || data_forwarding(op->rs2,op->op2)) {
+  if (data_forwarding(op->rs1,op->op1)) {
     if (verbose_) {
-      printf("\tforwading at decode for data hazard\n");
+      printf("\tforwading at decode for data1 hazard\n");
+    }
+  }
+  if (data_forwarding(op->rs2,op->op2)) {
+    if (verbose_) {
+      printf("\tforwading at decode for data2 hazard\n");
     }
   }
   // control hazard
