@@ -499,7 +499,6 @@ void ExecuteInst(PipeOp* op, bool* exit_ctrl, const Memory* mem) {
   uint32_t& jump_pc = op->jump_pc;
   jump_pc = pc + 4;
 
-  int64_t a,b,c,d;
   switch (inst_type) {
     case LUI:
       out = offset << 12;
@@ -633,12 +632,49 @@ void ExecuteInst(PipeOp* op, bool* exit_ctrl, const Memory* mem) {
       out = op1 * op2;
       break;
     case MULH:
-      a=op1>>32;
-      b=op1 & 0xffffffff;
-      c=op2>>32;
-      d=op2 & 0xffffffff;
-      out = a*c + ((a*d+b*c)>>32);
-      break;
+    {
+        // 提取符号
+        bool neg_result = ((op1 < 0) != (op2 < 0));
+        
+        // 取绝对值（注意处理 INT64_MIN 的特殊情况）
+        uint64_t u1 = (op1 == INT64_MIN) ? (uint64_t)INT64_MIN : std::abs(op1);
+        uint64_t u2 = (op2 == INT64_MIN) ? (uint64_t)INT64_MIN : std::abs(op2);
+        
+        // 64x64 位无符号乘法，得到 128 位结果
+        uint64_t a = u1 >> 32;        // 高 32 位
+        uint64_t b = u1 & 0xFFFFFFFF; // 低 32 位
+        uint64_t c = u2 >> 32;        // 高 32 位  
+        uint64_t d = u2 & 0xFFFFFFFF; // 低 32 位
+        
+        // 计算各部分乘积
+        uint64_t ac = a * c;
+        uint64_t ad = a * d;
+        uint64_t bc = b * c;
+        uint64_t bd = b * d;
+        
+        // 组合结果（128 位）
+        uint64_t mid = ad + (bd >> 32);
+        uint64_t carry = (mid < ad) ? 1 : 0;  // 处理进位
+        
+        uint64_t high = ac + (mid >> 32) + (bc >> 32) + carry;
+        uint64_t low = (mid << 32) | (bd & 0xFFFFFFFF);
+        
+        // 我们只需要高 64 位
+        uint64_t unsigned_result = high;
+        
+        // 应用符号
+        if (neg_result) {
+            // 对于负数，需要计算补码
+            out = -unsigned_result;
+            // 如果低 64 位不为 0，需要借位
+            if (low != 0) {
+                out -= 1;
+            }
+        } else {
+            out = unsigned_result;
+        }
+        break;
+    }
     case DIV:
       out = op1 / op2;
       break;
