@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/ca2/lab2/build",
+  "command": "/usr/bin/c++  -I/home/ca2/lab2/third-party  -Wall -Wextra -pedantic -O2 -g -DNDEBUG -std=gnu++20 -o CMakeFiles/simulator.dir/src/main.cc.o -c /home/ca2/lab2/src/main.cc",
+  "file": "/home/ca2/lab2/src/main.cc",
+  "output": "CMakeFiles/simulator.dir/src/main.cc.o"
+},
+{
+  "directory": "/home/ca2/lab2/build",
+  "command": "/usr/bin/c++  -I/home/ca2/lab2/third-party  -Wall -Wextra -pedantic -O2 -g -DNDEBUG -std=gnu++20 -o CMakeFiles/simulator.dir/src/memory.cc.o -c /home/ca2/lab2/src/memory.cc",
+  "file": "/home/ca2/lab2/src/memory.cc",
+  "output": "CMakeFiles/simulator.dir/src/memory.cc.o"
+},
+{
+  "directory": "/home/ca2/lab2/build",
+  "command": "/usr/bin/c++  -I/home/ca2/lab2/third-party  -Wall -Wextra -pedantic -O2 -g -DNDEBUG -std=gnu++20 -o CMakeFiles/simulator.dir/src/simulator.cc.o -c /home/ca2/lab2/src/simulator.cc",
+  "file": "/home/ca2/lab2/src/simulator.cc",
+  "output": "CMakeFiles/simulator.dir/src/simulator.cc.o"
+},
+{
+  "directory": "/home/ca2/lab2/build",
+  "command": "/usr/bin/c++  -I/home/ca2/lab2/third-party  -Wall -Wextra -pedantic -O2 -g -DNDEBUG -std=gnu++20 -o CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o -c /home/ca2/lab2/src/five_stage_simulator.cc",
+  "file": "/home/ca2/lab2/src/five_stage_simulator.cc",
+  "output": "CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o"
+},
+{
+  "directory": "/home/ca2/lab2/build",
+  "command": "/usr/bin/c++  -I/home/ca2/lab2/third-party  -Wall -Wextra -pedantic -O2 -g -DNDEBUG -std=gnu++20 -o CMakeFiles/simulator.dir/src/riscv.cc.o -c /home/ca2/lab2/src/riscv.cc",
+  "file": "/home/ca2/lab2/src/riscv.cc",
+  "output": "CMakeFiles/simulator.dir/src/riscv.cc.o"
+}
+]
