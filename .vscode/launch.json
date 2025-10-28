@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Simulator",               // 配置名称
+            "type": "cppdbg",                        // C++ GDB 调试
+            "request": "launch",                     // 启动模式
+            "program": "${workspaceFolder}/build/simulator", // 可执行文件路径
+            "args": [
+                "-i",
+                "test/build/with-syscall/ackermann.riscv",
+                "--cache_levels", "4K,8,64,4,lru",
+                // "--cache_levels", "8K,8,64,20,lru",
+                "--enable_latency",
+                "--inclusion_policy", "inclusive",
+                "--write_policy", "wbwa"
+            ],
+            "stopAtEntry": false,                    // 是否在 main 停
+            "cwd": "${workspaceFolder}",             // 工作目录
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
