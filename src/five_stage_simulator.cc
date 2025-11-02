@@ -16,7 +16,15 @@
 #include "utils.h"
 
 using namespace RISCV;
+// 全局输出文件
+FILE* fp1 = fopen("inst.txt", "a");
 
+// 安全宏定义
+#define VERBOSE_PRINT(...) \
+  do { if (verbose_ && fp1) fprintf(fp1, __VA_ARGS__); } while (0)
+
+#define VERBOSE_PRINT_STR(str) \
+  do { if (verbose_ && fp1) fprintf(fp1, "%s", (str).c_str()); } while (0)
 void FiveStageSimulator::Run() {
   // Main Simulation Loop
   while (true) {
@@ -30,7 +38,7 @@ void FiveStageSimulator::Run() {
     // handle branch recoveries
     if (should_recover_branch_) {
       if (verbose_)
-        printf("branch recovery: new pc 0x%08lx\n", branch_next_pc_);
+        VERBOSE_PRINT("branch recovery: new pc 0x%08lx\n", branch_next_pc_);
 
       pc_ = branch_next_pc_;
       should_recover_branch_ = false;
@@ -60,7 +68,7 @@ void FiveStageSimulator::Run() {
     }
 
     if (verbose_) {
-      std::cout << GetRegInfoStr();
+      VERBOSE_PRINT_STR(GetRegInfoStr());
     }
 
     if (single_step_) {
@@ -79,7 +87,7 @@ void FiveStageSimulator::Fetch() {
   // control hazard
   if (true == wait_for_branch_) {
     if (verbose_) {
-      printf("control hazard at fetch\n");
+      VERBOSE_PRINT("control hazard at fetch\n");
     }
     // debug information
     history_.control_hazard_count++;
@@ -89,7 +97,7 @@ void FiveStageSimulator::Fetch() {
   /* if pipeline is stalled (our output slot is not empty), return */
   if (decode_op_ != nullptr) {
     if (verbose_) {
-      printf("Fetch: stalled at fetch\n");
+      VERBOSE_PRINT("Fetch: stalled at fetch\n");
     }
     return;
   }
@@ -100,9 +108,9 @@ void FiveStageSimulator::Fetch() {
 
   /* Allocate an op and send it down the pipeline. */
   auto op = std::make_unique<PipeOp>();
-  op->inst = memory_->GetInt(pc_);
+  op->inst = memory_->GetInt(pc_,LATENCY_TYPE::FETCH);
   if (verbose_) {
-    printf("Fetched instruction 0x%.8x at address 0x%lx\n", op->inst, pc_);
+    VERBOSE_PRINT("Fetched instruction 0x%.8x at address 0x%lx\n", op->inst, pc_);
   }
   op->pc = pc_;
   decode_op_ = std::move(op);
@@ -115,7 +123,7 @@ void FiveStageSimulator::Decode() {
   /* if no op to decode, return */
   if (decode_op_ == nullptr) {
     if (verbose_) {
-      printf("decode: Bubble\n");
+      VERBOSE_PRINT("decode: Bubble\n");
     }
     return;
   }
@@ -139,16 +147,16 @@ void FiveStageSimulator::Decode() {
    */
   if (execute_op_ != nullptr) {
     if (verbose_) {
-      std::cout << fmt::format(
+      VERBOSE_PRINT_STR(fmt::format(
           "Decoded instruction {:#010x} at address {:#x} as {}\n", op->inst,
-          op->pc, op->inst_str);
+          op->pc, op->inst_str));
     }
     return;
   }
   if (verbose_) {
-    std::cout << fmt::format(
+    VERBOSE_PRINT_STR(fmt::format(
         "Decoded instruction {:#010x} at address {:#x} as {}\n", op->inst,
-        op->pc, op->inst_str);
+        op->pc, op->inst_str));
   }
 
   // data hazard detect at last to show inststr
@@ -161,7 +169,7 @@ void FiveStageSimulator::Decode() {
   };
   if (wait_for_data(op->rs1) || wait_for_data(op->rs2)) {
     if (verbose_) {
-      printf("\tstalled at decode for data hazard\n");
+      VERBOSE_PRINT("\tstalled at decode for data hazard\n");
     }
     // debug information
     history_.data_hazard_count++;
@@ -180,7 +188,7 @@ void FiveStageSimulator::Execute() {
   /* if no op to execute, return */
   if (execute_op_ == nullptr) {
     if (verbose_) {
-      printf("Execute: Bubble\n");
+      VERBOSE_PRINT("Execute: Bubble\n");
     }
     return;
   }
@@ -189,14 +197,14 @@ void FiveStageSimulator::Execute() {
   /* if downstream stall, return (and leave any input we had) */
   if (mem_op_ != nullptr) {
     if (verbose_) {
-      printf("Execute: Stall\n");
+      VERBOSE_PRINT("Execute: Stall\n");
     }
     return;
   }
   if (verbose_) {
-    std::cout << fmt::format(
+    VERBOSE_PRINT_STR(fmt::format(
         "Execute instruction {:#010x} at address {:#x} as {}\n", op->inst,
-        op->pc, op->inst_str);
+        op->pc, op->inst_str));
   }
   history_.inst_count++;
 
@@ -235,13 +243,13 @@ void FiveStageSimulator::MemoryAccess() {
   /* if there is no instruction in this pipeline stage, we are done */
   if (!mem_op_) {
     if (verbose_) {
-      printf("Memory Access: Bubble\n");
+      VERBOSE_PRINT("Memory Access: Bubble\n");
     }
     return;
   }
-
+   //区分第一次访存和最后一次访存的区别，避免多次赋值
   PipeOp* op = mem_op_.get();
-
+  
   const int64_t& op2 = op->op2;
   const RegId& dest_reg = op->dest_reg;
   int64_t& out = op->out;
@@ -250,14 +258,22 @@ void FiveStageSimulator::MemoryAccess() {
   const bool read_sign_ext = op->read_sign_ext;
   const uint32_t mem_len = op->mem_len;
 
+  if ((*memory_->time_)>0) {
+    if (verbose_) {
+      VERBOSE_PRINT("Memory Access: latency-%d\n",*memory_->time_);
+    }
+    (*memory_->time_)--;
+    data_hazard_mem_op_dest_ = dest_reg; //注意:为了阻塞下一条指令在decode阶段，必须每次返回前都重设一下
+    return;
+  }
+ 
   if (verbose_) {
-    std::cout << fmt::format(
+    VERBOSE_PRINT_STR(fmt::format(
         "MemoryAccess instruction {:#010x} at address {:#x} as {}\n", op->inst,
-        op->pc, op->inst_str);
+        op->pc, op->inst_str));
   }
 
   data_hazard_mem_op_dest_ = dest_reg;
-
   if (write_mem) {
     switch (mem_len) {
       case 1:
@@ -277,7 +293,7 @@ void FiveStageSimulator::MemoryAccess() {
     }
    }
   
-
+  int64_t prev_addr=out;
   if (read_mem) {
     switch (mem_len) {
       case 1:
@@ -305,7 +321,7 @@ void FiveStageSimulator::MemoryAccess() {
         if (read_sign_ext) {
           out = (int64_t)memory_->GetLong(out);
         } else {
-          out = (uint64_t)memory_->GetLong(out);
+          out = (uint64_t)memory_->GetLong(out); //注意这个地方的Out会把地址覆盖掉
         }
         break;
       default:
@@ -313,8 +329,12 @@ void FiveStageSimulator::MemoryAccess() {
     }
   }
 
-  // data hazard for decode to detect
-  data_hazard_mem_op_dest_ = dest_reg;
+
+  if ((*memory_->time_)>0) {
+    out=prev_addr;//把地址恢复回来
+    return;
+  }
+  
 
   /* clear stage input and transfer to next stage */
   wb_op_ = std::move(mem_op_);
@@ -325,7 +345,7 @@ void FiveStageSimulator::WriteBack() {
   /* if there is no instruction in this pipeline stage, we are done */
   if (!wb_op_) {
     if (verbose_) {
-      printf("WriteBack: Bubble\n");
+      VERBOSE_PRINT("WriteBack: Bubble\n");
     }
     return;
   }
@@ -334,9 +354,9 @@ void FiveStageSimulator::WriteBack() {
   /* grab the op out of our input slot */
   PipeOp* op = wb_op_.get();
   if (verbose_) {
-    std::cout << fmt::format(
+    VERBOSE_PRINT_STR(fmt::format(
         "WriteBack instruction {:#010x} at address {:#x} as {}\n", op->inst,
-        op->pc, op->inst_str);
+        op->pc, op->inst_str));
   }
 
   /* if this instruction writes a register, do so now */
@@ -375,6 +395,8 @@ void FiveStageSimulator::PrintStatistics() const {
   printf("Number of Control Hazards: %u\n", history_.control_hazard_count);
   printf("Number of Data Hazards: %u\n", history_.data_hazard_count);
   printf("-----------------------------------\n");
+
+ memory_->PrintStats();
 }
 
 std::string FiveStageSimulator::GetRegInfoStr() const {

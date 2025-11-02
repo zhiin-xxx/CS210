@@ -39,7 +39,7 @@ struct Options {
 
   // latency simulation
   bool enable_latency = false;
-  uint32_t memory_latency = 100;  // plain memory access latency
+  uint32_t memory_latency = 1;  // plain memory access latency
 
   // trace options
   bool enable_trace = false;

@@ -1,37 +1,37 @@
 [
 {
   "directory": "/home/xzx/CAII/lab3/build",
-  "command": "/usr/bin/g++-12 -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab3/third-party -O2 -g -DNDEBUG -Wall -Wextra -pedantic -std=gnu++20 -o CMakeFiles/simulator.dir/src/main.cc.o -c /home/xzx/CAII/lab3/src/main.cc",
+  "command": "/usr/bin/c++ -DDEBUG -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab3/third-party -g -Wall -Wextra -pedantic -std=gnu++20 -o CMakeFiles/simulator.dir/src/main.cc.o -c /home/xzx/CAII/lab3/src/main.cc",
   "file": "/home/xzx/CAII/lab3/src/main.cc"
 },
 {
   "directory": "/home/xzx/CAII/lab3/build",
-  "command": "/usr/bin/g++-12 -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab3/third-party -O2 -g -DNDEBUG -Wall -Wextra -pedantic -std=gnu++20 -o CMakeFiles/simulator.dir/src/memory.cc.o -c /home/xzx/CAII/lab3/src/memory.cc",
+  "command": "/usr/bin/c++ -DDEBUG -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab3/third-party -g -Wall -Wextra -pedantic -std=gnu++20 -o CMakeFiles/simulator.dir/src/memory.cc.o -c /home/xzx/CAII/lab3/src/memory.cc",
   "file": "/home/xzx/CAII/lab3/src/memory.cc"
 },
 {
   "directory": "/home/xzx/CAII/lab3/build",
-  "command": "/usr/bin/g++-12 -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab3/third-party -O2 -g -DNDEBUG -Wall -Wextra -pedantic -std=gnu++20 -o CMakeFiles/simulator.dir/src/cache.cc.o -c /home/xzx/CAII/lab3/src/cache.cc",
+  "command": "/usr/bin/c++ -DDEBUG -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab3/third-party -g -Wall -Wextra -pedantic -std=gnu++20 -o CMakeFiles/simulator.dir/src/cache.cc.o -c /home/xzx/CAII/lab3/src/cache.cc",
   "file": "/home/xzx/CAII/lab3/src/cache.cc"
 },
 {
   "directory": "/home/xzx/CAII/lab3/build",
-  "command": "/usr/bin/g++-12 -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab3/third-party -O2 -g -DNDEBUG -Wall -Wextra -pedantic -std=gnu++20 -o CMakeFiles/simulator.dir/src/memory_manager.cc.o -c /home/xzx/CAII/lab3/src/memory_manager.cc",
+  "command": "/usr/bin/c++ -DDEBUG -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab3/third-party -g -Wall -Wextra -pedantic -std=gnu++20 -o CMakeFiles/simulator.dir/src/memory_manager.cc.o -c /home/xzx/CAII/lab3/src/memory_manager.cc",
   "file": "/home/xzx/CAII/lab3/src/memory_manager.cc"
 },
 {
   "directory": "/home/xzx/CAII/lab3/build",
-  "command": "/usr/bin/g++-12 -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab3/third-party -O2 -g -DNDEBUG -Wall -Wextra -pedantic -std=gnu++20 -o CMakeFiles/simulator.dir/src/simulator.cc.o -c /home/xzx/CAII/lab3/src/simulator.cc",
+  "command": "/usr/bin/c++ -DDEBUG -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab3/third-party -g -Wall -Wextra -pedantic -std=gnu++20 -o CMakeFiles/simulator.dir/src/simulator.cc.o -c /home/xzx/CAII/lab3/src/simulator.cc",
   "file": "/home/xzx/CAII/lab3/src/simulator.cc"
 },
 {
   "directory": "/home/xzx/CAII/lab3/build",
-  "command": "/usr/bin/g++-12 -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab3/third-party -O2 -g -DNDEBUG -Wall -Wextra -pedantic -std=gnu++20 -o CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o -c /home/xzx/CAII/lab3/src/five_stage_simulator.cc",
+  "command": "/usr/bin/c++ -DDEBUG -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab3/third-party -g -Wall -Wextra -pedantic -std=gnu++20 -o CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o -c /home/xzx/CAII/lab3/src/five_stage_simulator.cc",
   "file": "/home/xzx/CAII/lab3/src/five_stage_simulator.cc"
 },
 {
   "directory": "/home/xzx/CAII/lab3/build",
-  "command": "/usr/bin/g++-12 -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab3/third-party -O2 -g -DNDEBUG -Wall -Wextra -pedantic -std=gnu++20 -o CMakeFiles/simulator.dir/src/riscv.cc.o -c /home/xzx/CAII/lab3/src/riscv.cc",
+  "command": "/usr/bin/c++ -DDEBUG -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab3/third-party -g -Wall -Wextra -pedantic -std=gnu++20 -o CMakeFiles/simulator.dir/src/riscv.cc.o -c /home/xzx/CAII/lab3/src/riscv.cc",
   "file": "/home/xzx/CAII/lab3/src/riscv.cc"
 }
 ]

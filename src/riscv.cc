@@ -17,10 +17,10 @@ int64_t HandleSystemCall(bool* exit_ctrl, int64_t type /* REG_A7 */,
     case 0:  // print string
     {
       uint32_t addr = arg1;
-      char ch = mem->GetByte(addr);
+      char ch = mem->GetByte(addr,LATENCY_TYPE::FETCH); //如何去做这个地方访存的假设
       while (ch != '\0') {
         printf("%c", ch);
-        ch = mem->GetByte(++addr);
+        ch = mem->GetByte(++addr,LATENCY_TYPE::FETCH);
       }
       break;
     }
@@ -49,6 +49,12 @@ int64_t HandleSystemCall(bool* exit_ctrl, int64_t type /* REG_A7 */,
     case 6:  // print long long num
     {
       printf("%lld", (long long)arg1);
+      break;
+    }
+    case 7: //cldemote
+    {
+      uint32_t addr = arg1;
+      mem->CLDemote(addr);
       break;
     }
     default:

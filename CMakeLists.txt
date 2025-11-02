@@ -12,9 +12,9 @@ endif()
 
 option(DEBUG "Enable debug output" OFF)
 
-#if(DEBUG)
-#    add_compile_definitions(DEBUG)
-#endif()
+if(DEBUG)
+    add_compile_definitions(DEBUG)
+endif()
 
 # 创建可执行文件
 add_executable(

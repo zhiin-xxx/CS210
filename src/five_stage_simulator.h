@@ -9,7 +9,13 @@
 #include "options.h"
 #include "riscv.h"
 #include "simulator.h"
-
+#ifndef LATENCY_TYPE_H
+#define LATENCY_TYPE_H
+enum class LATENCY_TYPE{
+  FETCH,
+  MEM   
+};
+#endif
 class FiveStageSimulator final : public Simulator {
   // control hazard
   // wait_for_branch_ is signal for fetch stage to stall,
@@ -25,7 +31,7 @@ class FiveStageSimulator final : public Simulator {
   RISCV::RegId data_hazard_execute_op_dest_ = -1;
   RISCV::RegId data_hazard_mem_op_dest_ = -1;
   RISCV::RegId data_hazard_wb_op_dest_ = -1;
-
+  
   std::unique_ptr<RISCV::PipeOp> decode_op_, execute_op_, mem_op_, wb_op_;
 
   struct History {

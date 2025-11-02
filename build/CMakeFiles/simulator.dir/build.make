@@ -73,99 +73,99 @@ CMakeFiles/simulator.dir/src/main.cc.o: CMakeFiles/simulator.dir/flags.make
 CMakeFiles/simulator.dir/src/main.cc.o: ../src/main.cc
 CMakeFiles/simulator.dir/src/main.cc.o: CMakeFiles/simulator.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xzx/CAII/lab3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/simulator.dir/src/main.cc.o"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulator.dir/src/main.cc.o -MF CMakeFiles/simulator.dir/src/main.cc.o.d -o CMakeFiles/simulator.dir/src/main.cc.o -c /home/xzx/CAII/lab3/src/main.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulator.dir/src/main.cc.o -MF CMakeFiles/simulator.dir/src/main.cc.o.d -o CMakeFiles/simulator.dir/src/main.cc.o -c /home/xzx/CAII/lab3/src/main.cc
 
 CMakeFiles/simulator.dir/src/main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulator.dir/src/main.cc.i"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xzx/CAII/lab3/src/main.cc > CMakeFiles/simulator.dir/src/main.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xzx/CAII/lab3/src/main.cc > CMakeFiles/simulator.dir/src/main.cc.i
 
 CMakeFiles/simulator.dir/src/main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulator.dir/src/main.cc.s"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xzx/CAII/lab3/src/main.cc -o CMakeFiles/simulator.dir/src/main.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xzx/CAII/lab3/src/main.cc -o CMakeFiles/simulator.dir/src/main.cc.s
 
 CMakeFiles/simulator.dir/src/memory.cc.o: CMakeFiles/simulator.dir/flags.make
 CMakeFiles/simulator.dir/src/memory.cc.o: ../src/memory.cc
 CMakeFiles/simulator.dir/src/memory.cc.o: CMakeFiles/simulator.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xzx/CAII/lab3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/simulator.dir/src/memory.cc.o"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulator.dir/src/memory.cc.o -MF CMakeFiles/simulator.dir/src/memory.cc.o.d -o CMakeFiles/simulator.dir/src/memory.cc.o -c /home/xzx/CAII/lab3/src/memory.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulator.dir/src/memory.cc.o -MF CMakeFiles/simulator.dir/src/memory.cc.o.d -o CMakeFiles/simulator.dir/src/memory.cc.o -c /home/xzx/CAII/lab3/src/memory.cc
 
 CMakeFiles/simulator.dir/src/memory.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulator.dir/src/memory.cc.i"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xzx/CAII/lab3/src/memory.cc > CMakeFiles/simulator.dir/src/memory.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xzx/CAII/lab3/src/memory.cc > CMakeFiles/simulator.dir/src/memory.cc.i
 
 CMakeFiles/simulator.dir/src/memory.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulator.dir/src/memory.cc.s"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xzx/CAII/lab3/src/memory.cc -o CMakeFiles/simulator.dir/src/memory.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xzx/CAII/lab3/src/memory.cc -o CMakeFiles/simulator.dir/src/memory.cc.s
 
 CMakeFiles/simulator.dir/src/cache.cc.o: CMakeFiles/simulator.dir/flags.make
 CMakeFiles/simulator.dir/src/cache.cc.o: ../src/cache.cc
 CMakeFiles/simulator.dir/src/cache.cc.o: CMakeFiles/simulator.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xzx/CAII/lab3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/simulator.dir/src/cache.cc.o"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulator.dir/src/cache.cc.o -MF CMakeFiles/simulator.dir/src/cache.cc.o.d -o CMakeFiles/simulator.dir/src/cache.cc.o -c /home/xzx/CAII/lab3/src/cache.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulator.dir/src/cache.cc.o -MF CMakeFiles/simulator.dir/src/cache.cc.o.d -o CMakeFiles/simulator.dir/src/cache.cc.o -c /home/xzx/CAII/lab3/src/cache.cc
 
 CMakeFiles/simulator.dir/src/cache.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulator.dir/src/cache.cc.i"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xzx/CAII/lab3/src/cache.cc > CMakeFiles/simulator.dir/src/cache.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xzx/CAII/lab3/src/cache.cc > CMakeFiles/simulator.dir/src/cache.cc.i
 
 CMakeFiles/simulator.dir/src/cache.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulator.dir/src/cache.cc.s"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xzx/CAII/lab3/src/cache.cc -o CMakeFiles/simulator.dir/src/cache.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xzx/CAII/lab3/src/cache.cc -o CMakeFiles/simulator.dir/src/cache.cc.s
 
 CMakeFiles/simulator.dir/src/memory_manager.cc.o: CMakeFiles/simulator.dir/flags.make
 CMakeFiles/simulator.dir/src/memory_manager.cc.o: ../src/memory_manager.cc
 CMakeFiles/simulator.dir/src/memory_manager.cc.o: CMakeFiles/simulator.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xzx/CAII/lab3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/simulator.dir/src/memory_manager.cc.o"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulator.dir/src/memory_manager.cc.o -MF CMakeFiles/simulator.dir/src/memory_manager.cc.o.d -o CMakeFiles/simulator.dir/src/memory_manager.cc.o -c /home/xzx/CAII/lab3/src/memory_manager.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulator.dir/src/memory_manager.cc.o -MF CMakeFiles/simulator.dir/src/memory_manager.cc.o.d -o CMakeFiles/simulator.dir/src/memory_manager.cc.o -c /home/xzx/CAII/lab3/src/memory_manager.cc
 
 CMakeFiles/simulator.dir/src/memory_manager.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulator.dir/src/memory_manager.cc.i"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xzx/CAII/lab3/src/memory_manager.cc > CMakeFiles/simulator.dir/src/memory_manager.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xzx/CAII/lab3/src/memory_manager.cc > CMakeFiles/simulator.dir/src/memory_manager.cc.i
 
 CMakeFiles/simulator.dir/src/memory_manager.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulator.dir/src/memory_manager.cc.s"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xzx/CAII/lab3/src/memory_manager.cc -o CMakeFiles/simulator.dir/src/memory_manager.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xzx/CAII/lab3/src/memory_manager.cc -o CMakeFiles/simulator.dir/src/memory_manager.cc.s
 
 CMakeFiles/simulator.dir/src/simulator.cc.o: CMakeFiles/simulator.dir/flags.make
 CMakeFiles/simulator.dir/src/simulator.cc.o: ../src/simulator.cc
 CMakeFiles/simulator.dir/src/simulator.cc.o: CMakeFiles/simulator.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xzx/CAII/lab3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/simulator.dir/src/simulator.cc.o"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulator.dir/src/simulator.cc.o -MF CMakeFiles/simulator.dir/src/simulator.cc.o.d -o CMakeFiles/simulator.dir/src/simulator.cc.o -c /home/xzx/CAII/lab3/src/simulator.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulator.dir/src/simulator.cc.o -MF CMakeFiles/simulator.dir/src/simulator.cc.o.d -o CMakeFiles/simulator.dir/src/simulator.cc.o -c /home/xzx/CAII/lab3/src/simulator.cc
 
 CMakeFiles/simulator.dir/src/simulator.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulator.dir/src/simulator.cc.i"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xzx/CAII/lab3/src/simulator.cc > CMakeFiles/simulator.dir/src/simulator.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xzx/CAII/lab3/src/simulator.cc > CMakeFiles/simulator.dir/src/simulator.cc.i
 
 CMakeFiles/simulator.dir/src/simulator.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulator.dir/src/simulator.cc.s"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xzx/CAII/lab3/src/simulator.cc -o CMakeFiles/simulator.dir/src/simulator.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xzx/CAII/lab3/src/simulator.cc -o CMakeFiles/simulator.dir/src/simulator.cc.s
 
 CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o: CMakeFiles/simulator.dir/flags.make
 CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o: ../src/five_stage_simulator.cc
 CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o: CMakeFiles/simulator.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xzx/CAII/lab3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o -MF CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o.d -o CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o -c /home/xzx/CAII/lab3/src/five_stage_simulator.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o -MF CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o.d -o CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o -c /home/xzx/CAII/lab3/src/five_stage_simulator.cc
 
 CMakeFiles/simulator.dir/src/five_stage_simulator.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulator.dir/src/five_stage_simulator.cc.i"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xzx/CAII/lab3/src/five_stage_simulator.cc > CMakeFiles/simulator.dir/src/five_stage_simulator.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xzx/CAII/lab3/src/five_stage_simulator.cc > CMakeFiles/simulator.dir/src/five_stage_simulator.cc.i
 
 CMakeFiles/simulator.dir/src/five_stage_simulator.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulator.dir/src/five_stage_simulator.cc.s"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xzx/CAII/lab3/src/five_stage_simulator.cc -o CMakeFiles/simulator.dir/src/five_stage_simulator.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xzx/CAII/lab3/src/five_stage_simulator.cc -o CMakeFiles/simulator.dir/src/five_stage_simulator.cc.s
 
 CMakeFiles/simulator.dir/src/riscv.cc.o: CMakeFiles/simulator.dir/flags.make
 CMakeFiles/simulator.dir/src/riscv.cc.o: ../src/riscv.cc
 CMakeFiles/simulator.dir/src/riscv.cc.o: CMakeFiles/simulator.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xzx/CAII/lab3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/simulator.dir/src/riscv.cc.o"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulator.dir/src/riscv.cc.o -MF CMakeFiles/simulator.dir/src/riscv.cc.o.d -o CMakeFiles/simulator.dir/src/riscv.cc.o -c /home/xzx/CAII/lab3/src/riscv.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulator.dir/src/riscv.cc.o -MF CMakeFiles/simulator.dir/src/riscv.cc.o.d -o CMakeFiles/simulator.dir/src/riscv.cc.o -c /home/xzx/CAII/lab3/src/riscv.cc
 
 CMakeFiles/simulator.dir/src/riscv.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulator.dir/src/riscv.cc.i"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xzx/CAII/lab3/src/riscv.cc > CMakeFiles/simulator.dir/src/riscv.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xzx/CAII/lab3/src/riscv.cc > CMakeFiles/simulator.dir/src/riscv.cc.i
 
 CMakeFiles/simulator.dir/src/riscv.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulator.dir/src/riscv.cc.s"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xzx/CAII/lab3/src/riscv.cc -o CMakeFiles/simulator.dir/src/riscv.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xzx/CAII/lab3/src/riscv.cc -o CMakeFiles/simulator.dir/src/riscv.cc.s
 
 # Object files for target simulator
 simulator_OBJECTS = \

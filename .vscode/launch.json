@@ -10,10 +10,11 @@
                 "-i",
                 "test/build/with-syscall/ackermann.riscv",
                 "--cache_levels", "4K,8,64,4,lru",
-                // "--cache_levels", "8K,8,64,20,lru",
+                "--cache_levels", "8K,8,64,20,lru",
                 "--enable_latency",
                 "--inclusion_policy", "inclusive",
-                "--write_policy", "wbwa"
+                "--write_policy", "wbwa",
+                "-v"
             ],
             "stopAtEntry": false,                    // 是否在 main 停
             "cwd": "${workspaceFolder}",             // 工作目录
