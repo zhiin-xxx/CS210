@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/xzx/CAII/lab4_template/build",
+  "command": "/usr/bin/c++ -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab4_template/third-party  -Wall -Wextra -pedantic -O2 -g -DNDEBUG -std=gnu++20 -o CMakeFiles/simulator.dir/src/main.cc.o -c /home/xzx/CAII/lab4_template/src/main.cc",
+  "file": "/home/xzx/CAII/lab4_template/src/main.cc"
+},
+{
+  "directory": "/home/xzx/CAII/lab4_template/build",
+  "command": "/usr/bin/c++ -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab4_template/third-party  -Wall -Wextra -pedantic -O2 -g -DNDEBUG -std=gnu++20 -o CMakeFiles/simulator.dir/src/memory.cc.o -c /home/xzx/CAII/lab4_template/src/memory.cc",
+  "file": "/home/xzx/CAII/lab4_template/src/memory.cc"
+},
+{
+  "directory": "/home/xzx/CAII/lab4_template/build",
+  "command": "/usr/bin/c++ -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab4_template/third-party  -Wall -Wextra -pedantic -O2 -g -DNDEBUG -std=gnu++20 -o CMakeFiles/simulator.dir/src/memory_manager.cc.o -c /home/xzx/CAII/lab4_template/src/memory_manager.cc",
+  "file": "/home/xzx/CAII/lab4_template/src/memory_manager.cc"
+},
+{
+  "directory": "/home/xzx/CAII/lab4_template/build",
+  "command": "/usr/bin/c++ -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab4_template/third-party  -Wall -Wextra -pedantic -O2 -g -DNDEBUG -std=gnu++20 -o CMakeFiles/simulator.dir/src/simulator.cc.o -c /home/xzx/CAII/lab4_template/src/simulator.cc",
+  "file": "/home/xzx/CAII/lab4_template/src/simulator.cc"
+},
+{
+  "directory": "/home/xzx/CAII/lab4_template/build",
+  "command": "/usr/bin/c++ -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab4_template/third-party  -Wall -Wextra -pedantic -O2 -g -DNDEBUG -std=gnu++20 -o CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o -c /home/xzx/CAII/lab4_template/src/five_stage_simulator.cc",
+  "file": "/home/xzx/CAII/lab4_template/src/five_stage_simulator.cc"
+},
+{
+  "directory": "/home/xzx/CAII/lab4_template/build",
+  "command": "/usr/bin/c++ -DFMT_LOCALE -DFMT_SHARED -I/home/xzx/CAII/lab4_template/third-party  -Wall -Wextra -pedantic -O2 -g -DNDEBUG -std=gnu++20 -o CMakeFiles/simulator.dir/src/riscv.cc.o -c /home/xzx/CAII/lab4_template/src/riscv.cc",
+  "file": "/home/xzx/CAII/lab4_template/src/riscv.cc"
+}
+]
