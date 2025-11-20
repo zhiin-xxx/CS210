@@ -348,6 +348,7 @@ CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o: ../src/five_stage_simula
   /usr/include/c++/11/span \
   /usr/include/c++/11/cstddef \
   ../src/simulator.h \
+  ../src/branch_predictor.h \
   /usr/include/fmt/format.h \
   /usr/include/fmt/core.h \
   ../src/memory.h \
@@ -2114,7 +2115,8 @@ CMakeFiles/simulator.dir/src/simulator.cc.o: ../src/simulator.cc \
   ../third-party/elfio/elfio_dynamic.hpp \
   ../src/memory.h \
   ../src/utils.h \
-  ../src/five_stage_simulator.h
+  ../src/five_stage_simulator.h \
+  ../src/branch_predictor.h
 
 
 ../src/elf_reader.h:
@@ -2308,6 +2310,8 @@ CMakeFiles/simulator.dir/src/simulator.cc.o: ../src/simulator.cc \
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
 /usr/include/c++/11/bits/stringfwd.h:
+
+../src/branch_predictor.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 

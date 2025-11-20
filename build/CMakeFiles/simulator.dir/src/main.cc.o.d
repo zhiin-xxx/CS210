@@ -1,7 +1,6 @@
-CMakeFiles/simulator.dir/src/main.cc.o: \
- /home/xzx/CAII/lab4_template/src/main.cc /usr/include/stdc-predef.h \
- /home/xzx/CAII/lab4_template/src/options.h \
- /home/xzx/CAII/lab4_template/third-party/CLI11/CLI11.hpp \
+CMakeFiles/simulator.dir/src/main.cc.o: /home/xzx/CAII/lab4/src/main.cc \
+ /usr/include/stdc-predef.h /home/xzx/CAII/lab4/src/options.h \
+ /home/xzx/CAII/lab4/third-party/CLI11/CLI11.hpp \
  /usr/include/c++/11/algorithm /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -270,9 +269,9 @@ CMakeFiles/simulator.dir/src/main.cc.o: \
  /usr/include/c++/11/ratio /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/bits/fs_path.h /usr/include/c++/11/codecvt \
  /usr/include/c++/11/bits/fs_dir.h /usr/include/c++/11/bits/fs_ops.h \
- /home/xzx/CAII/lab4_template/src/simulator.h \
- /home/xzx/CAII/lab4_template/src/memory_manager.h \
- /home/xzx/CAII/lab4_template/src/byte_addressable.h \
- /usr/include/c++/11/span /usr/include/c++/11/cstddef \
- /home/xzx/CAII/lab4_template/src/riscv.h /usr/include/c++/11/cassert \
- /usr/include/assert.h /home/xzx/CAII/lab4_template/src/utils.h
+ /home/xzx/CAII/lab4/src/simulator.h \
+ /home/xzx/CAII/lab4/src/memory_manager.h \
+ /home/xzx/CAII/lab4/src/byte_addressable.h /usr/include/c++/11/span \
+ /usr/include/c++/11/cstddef /home/xzx/CAII/lab4/src/riscv.h \
+ /usr/include/c++/11/cassert /usr/include/assert.h \
+ /home/xzx/CAII/lab4/src/utils.h

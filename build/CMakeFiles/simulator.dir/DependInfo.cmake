@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/xzx/CAII/lab4_template/src/five_stage_simulator.cc" "CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o" "gcc" "CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o.d"
-  "/home/xzx/CAII/lab4_template/src/main.cc" "CMakeFiles/simulator.dir/src/main.cc.o" "gcc" "CMakeFiles/simulator.dir/src/main.cc.o.d"
-  "/home/xzx/CAII/lab4_template/src/memory.cc" "CMakeFiles/simulator.dir/src/memory.cc.o" "gcc" "CMakeFiles/simulator.dir/src/memory.cc.o.d"
-  "/home/xzx/CAII/lab4_template/src/memory_manager.cc" "CMakeFiles/simulator.dir/src/memory_manager.cc.o" "gcc" "CMakeFiles/simulator.dir/src/memory_manager.cc.o.d"
-  "/home/xzx/CAII/lab4_template/src/riscv.cc" "CMakeFiles/simulator.dir/src/riscv.cc.o" "gcc" "CMakeFiles/simulator.dir/src/riscv.cc.o.d"
-  "/home/xzx/CAII/lab4_template/src/simulator.cc" "CMakeFiles/simulator.dir/src/simulator.cc.o" "gcc" "CMakeFiles/simulator.dir/src/simulator.cc.o.d"
+  "/home/xzx/CAII/lab4/src/five_stage_simulator.cc" "CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o" "gcc" "CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o.d"
+  "/home/xzx/CAII/lab4/src/main.cc" "CMakeFiles/simulator.dir/src/main.cc.o" "gcc" "CMakeFiles/simulator.dir/src/main.cc.o.d"
+  "/home/xzx/CAII/lab4/src/memory.cc" "CMakeFiles/simulator.dir/src/memory.cc.o" "gcc" "CMakeFiles/simulator.dir/src/memory.cc.o.d"
+  "/home/xzx/CAII/lab4/src/memory_manager.cc" "CMakeFiles/simulator.dir/src/memory_manager.cc.o" "gcc" "CMakeFiles/simulator.dir/src/memory_manager.cc.o.d"
+  "/home/xzx/CAII/lab4/src/riscv.cc" "CMakeFiles/simulator.dir/src/riscv.cc.o" "gcc" "CMakeFiles/simulator.dir/src/riscv.cc.o.d"
+  "/home/xzx/CAII/lab4/src/simulator.cc" "CMakeFiles/simulator.dir/src/simulator.cc.o" "gcc" "CMakeFiles/simulator.dir/src/simulator.cc.o.d"
   )
 
 # Targets to which this target links.

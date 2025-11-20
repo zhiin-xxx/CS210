@@ -1,7 +1,7 @@
 CMakeFiles/simulator.dir/src/memory.cc.o: \
- /home/xzx/CAII/lab4_template/src/memory.cc /usr/include/stdc-predef.h \
- /home/xzx/CAII/lab4_template/src/memory.h \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio.hpp \
+ /home/xzx/CAII/lab4/src/memory.cc /usr/include/stdc-predef.h \
+ /home/xzx/CAII/lab4/src/memory.h \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio.hpp \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -193,22 +193,22 @@ CMakeFiles/simulator.dir/src/memory.cc.o: \
  /usr/include/c++/11/bits/vector.tcc \
  /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/deque \
  /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
- /home/xzx/CAII/lab4_template/third-party/elfio/elf_types.hpp \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio_utils.hpp \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio_header.hpp \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio_section.hpp \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio_segment.hpp \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio_strings.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elf_types.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio_utils.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio_header.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio_section.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio_segment.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio_strings.hpp \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio_symbols.hpp \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio_note.hpp \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio_relocation.hpp \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio_dynamic.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio_symbols.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio_note.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio_relocation.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio_dynamic.hpp \
  /usr/include/c++/11/span /usr/include/c++/11/cstddef \
- /home/xzx/CAII/lab4_template/src/byte_addressable.h \
- /usr/include/fmt/format.h /usr/include/c++/11/cmath /usr/include/math.h \
+ /home/xzx/CAII/lab4/src/byte_addressable.h /usr/include/fmt/format.h \
+ /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \

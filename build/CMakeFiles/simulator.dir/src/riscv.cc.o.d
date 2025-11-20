@@ -1,7 +1,6 @@
-CMakeFiles/simulator.dir/src/riscv.cc.o: \
- /home/xzx/CAII/lab4_template/src/riscv.cc /usr/include/stdc-predef.h \
- /home/xzx/CAII/lab4_template/src/riscv.h /usr/include/c++/11/array \
- /usr/include/c++/11/utility \
+CMakeFiles/simulator.dir/src/riscv.cc.o: /home/xzx/CAII/lab4/src/riscv.cc \
+ /usr/include/stdc-predef.h /home/xzx/CAII/lab4/src/riscv.h \
+ /usr/include/c++/11/array /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -145,8 +144,8 @@ CMakeFiles/simulator.dir/src/riscv.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /home/xzx/CAII/lab4_template/src/memory_manager.h \
- /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_uninitialized.h \
+ /home/xzx/CAII/lab4/src/memory_manager.h /usr/include/c++/11/memory \
+ /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
  /usr/include/c++/11/bits/uses_allocator.h \
@@ -210,13 +209,13 @@ CMakeFiles/simulator.dir/src/riscv.cc.o: \
  /usr/include/c++/11/bits/uses_allocator_args.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/xzx/CAII/lab4_template/src/byte_addressable.h \
- /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
+ /home/xzx/CAII/lab4/src/byte_addressable.h /usr/include/c++/11/cstring \
+ /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /usr/include/c++/11/span /usr/include/c++/11/cstddef \
- /home/xzx/CAII/lab4_template/src/options.h \
- /home/xzx/CAII/lab4_template/third-party/CLI11/CLI11.hpp \
+ /home/xzx/CAII/lab4/src/options.h \
+ /home/xzx/CAII/lab4/third-party/CLI11/CLI11.hpp \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/ranges_algo.h \
  /usr/include/c++/11/bits/ranges_util.h \
  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
@@ -276,4 +275,4 @@ CMakeFiles/simulator.dir/src/riscv.cc.o: \
  /usr/include/c++/11/bits/fs_path.h /usr/include/c++/11/codecvt \
  /usr/include/c++/11/bits/fs_dir.h /usr/include/c++/11/bits/fs_ops.h \
  /usr/include/fmt/format.h /usr/include/fmt/core.h \
- /home/xzx/CAII/lab4_template/src/utils.h
+ /home/xzx/CAII/lab4/src/utils.h

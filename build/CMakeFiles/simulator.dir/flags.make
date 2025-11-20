@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DFMT_LOCALE -DFMT_SHARED
 
-CXX_INCLUDES = -I/home/xzx/CAII/lab4_template/third-party
+CXX_INCLUDES = -I/home/xzx/CAII/lab4/third-party
 
 CXX_FLAGS =  -Wall -Wextra -pedantic -O2 -g -DNDEBUG -std=gnu++20
 

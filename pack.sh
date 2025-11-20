@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 set -euo pipefail
 
-STUDENT_ID=2025000000
-MAIL_PREFIX=zhangs2025
+STUDENT_ID=2025234366
+MAIL_PREFIX=xiaozhx2025
 ZIP_NAME="${STUDENT_ID}_${MAIL_PREFIX}.zip"
 
 mkdir -p "simulator"

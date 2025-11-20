@@ -1,7 +1,7 @@
 CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o: \
- /home/xzx/CAII/lab4_template/src/five_stage_simulator.cc \
+ /home/xzx/CAII/lab4/src/five_stage_simulator.cc \
  /usr/include/stdc-predef.h \
- /home/xzx/CAII/lab4_template/src/five_stage_simulator.h \
+ /home/xzx/CAII/lab4/src/five_stage_simulator.h \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -208,9 +208,8 @@ CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o: \
  /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/vector \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc \
- /home/xzx/CAII/lab4_template/src/options.h \
- /home/xzx/CAII/lab4_template/third-party/CLI11/CLI11.hpp \
+ /usr/include/c++/11/bits/vector.tcc /home/xzx/CAII/lab4/src/options.h \
+ /home/xzx/CAII/lab4/third-party/CLI11/CLI11.hpp \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/ranges_algo.h \
  /usr/include/c++/11/bits/ranges_util.h \
  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
@@ -270,23 +269,23 @@ CMakeFiles/simulator.dir/src/five_stage_simulator.cc.o: \
  /usr/include/c++/11/ratio /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/bits/fs_path.h /usr/include/c++/11/codecvt \
  /usr/include/c++/11/bits/fs_dir.h /usr/include/c++/11/bits/fs_ops.h \
- /home/xzx/CAII/lab4_template/src/riscv.h /usr/include/c++/11/cassert \
- /usr/include/assert.h /home/xzx/CAII/lab4_template/src/memory_manager.h \
- /home/xzx/CAII/lab4_template/src/byte_addressable.h \
- /usr/include/c++/11/span /usr/include/c++/11/cstddef \
- /home/xzx/CAII/lab4_template/src/simulator.h /usr/include/fmt/format.h \
- /usr/include/fmt/core.h /home/xzx/CAII/lab4_template/src/memory.h \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio.hpp \
+ /home/xzx/CAII/lab4/src/riscv.h /usr/include/c++/11/cassert \
+ /usr/include/assert.h /home/xzx/CAII/lab4/src/memory_manager.h \
+ /home/xzx/CAII/lab4/src/byte_addressable.h /usr/include/c++/11/span \
+ /usr/include/c++/11/cstddef /home/xzx/CAII/lab4/src/simulator.h \
+ /home/xzx/CAII/lab4/src/branch_predictor.h /usr/include/fmt/format.h \
+ /usr/include/fmt/core.h /home/xzx/CAII/lab4/src/memory.h \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio.hpp \
  /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
  /usr/include/c++/11/bits/deque.tcc \
- /home/xzx/CAII/lab4_template/third-party/elfio/elf_types.hpp \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio_utils.hpp \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio_header.hpp \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio_section.hpp \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio_segment.hpp \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio_strings.hpp \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio_symbols.hpp \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio_note.hpp \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio_relocation.hpp \
- /home/xzx/CAII/lab4_template/third-party/elfio/elfio_dynamic.hpp \
- /home/xzx/CAII/lab4_template/src/utils.h
+ /home/xzx/CAII/lab4/third-party/elfio/elf_types.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio_utils.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio_header.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio_section.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio_segment.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio_strings.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio_symbols.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio_note.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio_relocation.hpp \
+ /home/xzx/CAII/lab4/third-party/elfio/elfio_dynamic.hpp \
+ /home/xzx/CAII/lab4/src/utils.h
