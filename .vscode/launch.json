@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Simulator",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/simulator",
+      "args": [
+        "-i", "test/build/with-syscall/test_branch.riscv",
+        "--pipeline_mode", "speculative Tomasulo",
+        "-v",
+        "-e",
+        "-p",
+        "--branch_predict_policy","One-bit Predictor (1-Bit)"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty printing",
+          "text": "-enable-pretty-printing"
+        }
+      ]
+    }
+  ]
+}
